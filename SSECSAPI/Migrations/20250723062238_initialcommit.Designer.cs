@@ -11,8 +11,8 @@ using SSECSAPI.Data;
 namespace SSECSAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250715111115_threeTables")]
-    partial class threeTables
+    [Migration("20250723062238_initialcommit")]
+    partial class initialcommit
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,6 +90,23 @@ namespace SSECSAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Super Admin"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Admin"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "User"
+                        });
                 });
 
             modelBuilder.Entity("SSECSAPI.Models.User", b =>
@@ -118,6 +135,40 @@ namespace SSECSAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "anil@gmail.com",
+                            Mobile = 9876543210L,
+                            Name = "Anil",
+                            Password = "Test@123"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "parmesh@gmail.com",
+                            Mobile = 8917653922L,
+                            Name = "Parmesh",
+                            Password = "Test@123"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Email = "smruti@gmail.com",
+                            Mobile = 8547963213L,
+                            Name = "Smruti",
+                            Password = "Test@123"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Email = "manas@gmail.com",
+                            Mobile = 8569321441L,
+                            Name = "Manas",
+                            Password = "Test@123"
+                        });
                 });
 
             modelBuilder.Entity("SSECSAPI.Models.UserRole", b =>
@@ -137,6 +188,32 @@ namespace SSECSAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            RoleId = 1,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            RoleId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            RoleId = 3,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            RoleId = 4,
+                            UserId = 4
+                        });
                 });
 #pragma warning restore 612, 618
         }
