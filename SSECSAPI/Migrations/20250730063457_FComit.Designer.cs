@@ -11,8 +11,8 @@ using SSECSAPI.Data;
 namespace SSECSAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250723062238_initialcommit")]
-    partial class initialcommit
+    [Migration("20250730063457_FComit")]
+    partial class FComit
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

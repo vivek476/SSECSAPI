@@ -7,7 +7,7 @@
 namespace SSECSAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class initialcommit : Migration
+    public partial class FComit : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

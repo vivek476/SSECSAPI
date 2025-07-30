@@ -34,6 +34,7 @@ builder.Services.AddScoped<IRating, RatingRepo>();
 builder.Services.AddScoped<IOrderStatus, OrderStatusRepo>();
 
 
+
 // Add services
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddControllers();
