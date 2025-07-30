@@ -25,7 +25,7 @@ namespace SSECSAPI.Data
 
             modelBuilder.Entity<User>().HasData(
                new User { Id = 1, Name = "Anil", Email = "anil@gmail.com", Mobile = 9876543210, Password = "Test@123" },
-               new User { Id = 2, Name = "Parmesh", Email = "parmesh@gmail.com", Mobile = 8917653922, Password = "Test@123" },
+               new User { Id = 2, Name = "Vivek", Email = "vivek@gmail.com", Mobile = 9658896558, Password = "Test@123" },
                new User { Id = 3, Name = "Smruti", Email = "smruti@gmail.com", Mobile = 8547963213, Password = "Test@123" },
                new User { Id = 4, Name = "Manas", Email = "manas@gmail.com", Mobile = 8569321441, Password = "Test@123" });
 
